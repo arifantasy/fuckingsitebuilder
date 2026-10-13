@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>fuckingsitebuilder — free website builder</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+
+  <header class="top">
+    <div class="brand">
+      <img class="brand-logo" src="logo.svg" alt="fuckingsitebuilder" />
+    </div>
+
+    <button class="tbtn" id="btnUndo" title="Undo (Ctrl+Z)">&#8630; Undo</button>
+    <button class="tbtn" id="btnRedo" title="Redo (Ctrl+Shift+Z)">&#8631; Redo</button>
+
+    <div class="grp" id="deviceGrp">
+      <button class="tbtn on" data-device="desktop" title="Desktop">Desktop</button>
+      <button class="tbtn" data-device="tablet" title="Tablet">Tablet</button>
+      <button class="tbtn" data-device="mobile" title="Mobile">Mobile</button>
+    </div>
+
+    <div class="spacer"></div>
+
+    <span id="status"></span>
+
+    <button class="tbtn" id="btnPage" title="Page settings">Page</button>
+    <button class="tbtn" id="btnNew" title="Start a new site">New</button>
+    <button class="tbtn" id="btnExportJson" title="Download project as JSON">Save file</button>
+    <button class="tbtn" id="btnImport" title="Load a project JSON">Open file</button>
+    <input type="file" id="fileImport" accept="application/json,.json" hidden />
+    <button class="tbtn" id="btnPreview" title="Preview (Esc to exit)">Preview</button>
+    <button class="tbtn primary" id="btnExportHtml" title="Download a ready-to-publish HTML file">Export HTML</button>
+  </header>
+
+  <div class="main">
+    <aside class="side left">
+      <div class="win-title side-title"><span>&#128193; Toolbox</span><span class="win-btns">_ &#9633; &#10005;</span></div>
+      <div class="palette" id="palette"></div>
+    </aside>
+
+    <div class="win">
+      <div class="win-title">
+        <span>&#127760; Untitled Document &mdash; fuckingsitebuilder</span>
+        <span class="win-btns">&#8212; &#9633; &#10005;</span>
+      </div>
+      <div class="canvas-host" id="canvasHost">
+        <div id="canvas"></div>
+      </div>
+    </div>
+
+    <aside class="side right">
+      <div class="win-title side-title"><span>&#9881; Properties</span><span class="win-btns">_ &#9633; &#10005;</span></div>
+      <div class="insp" id="inspector"></div>
+    </aside>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
